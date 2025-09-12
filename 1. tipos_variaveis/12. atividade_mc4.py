@@ -10,5 +10,4 @@ sexo = str(input("Selecione seu sexo: "))
 altura = float(input("Digite sua altura: "))
 match sexo:
     case "M":
-    print("Peso ideal.")
-    case
+        print("Peso ideal.")
