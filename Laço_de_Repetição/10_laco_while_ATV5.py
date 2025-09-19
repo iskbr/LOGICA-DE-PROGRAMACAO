@@ -15,3 +15,11 @@ for i in range(QUANTIDADE_NOTAS):
 media = soma / QUANTIDADE_NOTAS
 
 print(f"Media: {media}")
+
+
+if media >= 7:
+    print("Aprovado!")
+elif media >= 5 and media < 7:
+    print("Em Recuperação.")
+else:
+    print("Reprovado.")
