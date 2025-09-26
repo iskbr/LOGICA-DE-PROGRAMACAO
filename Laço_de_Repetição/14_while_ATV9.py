@@ -9,15 +9,16 @@ quantidade_impares = 0
 
 while True:
     numero = int(input("Digite um número inteiro: "))
-        
-    if numero %2 == 0:
-        quantidade_pares += 1
-        soma_pares += 1
-    else:
-        quantidade_impares += 1
+    if numero > 0:    
+        if numero %2 == 0:
+            quantidade_pares += 1
+            soma_pares += 1
+        else:
+            quantidade_impares += 1
 
-    quantidade_numeros += 1
-    soma += numero
+        quantidade_numeros += 1 #adicionar mais um ao contador
+        soma += numero # Soma a nota atual ao valor da variável soma.
+    
     if numero == 0:
         break
 
