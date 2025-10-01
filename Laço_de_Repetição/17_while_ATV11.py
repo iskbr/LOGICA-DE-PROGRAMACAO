@@ -38,4 +38,26 @@ Código  |  Descrição
             quantidade_filhos += 1
 
             # Maior e Menor salário
-            if salario < maior_salario
+            if salario < menor_salario:
+                menor_salario =  salario
+
+            if salario > maior_salario:
+                maior_salario = salario
+
+        case 2:
+            media_salario = soma_salario / quantidade_salarios if quantidade_salarios != 0 else 0
+            
+            print("\n= Exibindo resultados =")
+            print(f"Total de famílias que responderam a pesquisa: {quantidade_familia}")
+            print(f"Média do salário da população: {media_salario}")
+            print(f"Média do número de filhos: {quantidade_filhos}")
+            print(f"Maior salário: {maior_salario}")
+            print(f"Menor salário: {menor_salario}")
+        
+        case 3:
+            print("Saindo do programa.")
+            input("Pressione Enter para sair...")
+            break
+        case _:
+            print("Opção inválida, tente novamente.")  
+            input("Pressione Enter para sair...")
