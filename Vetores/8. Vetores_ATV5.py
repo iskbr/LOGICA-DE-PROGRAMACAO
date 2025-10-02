@@ -1,24 +1,21 @@
+	
 import os
 os.system("cls")
 
-preco_total = 0
-lista_nomes = []
 lista_pratos = []
+precos_pratos = []
 
 while True:
-    print("""
-===== MENU =====
-Código       Prato            Valor
-  1         Picanha         R$ 25,00
-  2         Lasanha         R$ 20,00
-  3         Strogonoff      R$ 18,00
-  4         Bife acebolado  R$ 15,00
-  5         Pão com ovo     R$ 5,00        
-          """)
+    opcao = int(input("""
+Código       Prato          Valor
+   1        Picanha         R$ 25,00
+   2        Lasanha         R$ 20,00
+   3        Strogonoff      R$ 18,00
+   4        Bife acebolado  R$ 15,00
+   5        Pão com ovo     R$ 5,00
+                     
+Digite a opção desejada: """))
    
-    opcao = int(input("Digite o código da opção desejada: "))
-
-
     match opcao:
         case 1:
             prato = "Picanha"
@@ -36,27 +33,24 @@ Código       Prato            Valor
             prato = "Pão com ovo"
             preco = 5
         case _:
-            print("Opção inválida.")
-            print("Tente novamente...")
-            preco = 0
+            print("Opção inválida. \nTente novamente.\n")
+   
+    if opcao >= 1 and opcao <= 5:
+        lista_pratos.append(prato)
+        precos_pratos.append(preco)
 
-    lista_nomes.append(opcao)
-    lista_pratos.append(opcao)
-
-    #match lista_nomes:
-        #case 1:
-            
-    preco_total += preco
-    
-    mais_pedidos = input("Deseja fazer um novo pedido? \nUse S ou N para responder: ").upper()
-
+    continuar = input("Deseja escolher outro prato? \nResponda com S ou N: ").lower()
+    if continuar == "n":
+        break
     os.system("cls")
 
-    if mais_pedidos == "N":
-        break
+if sum(precos_pratos) == 0:
+    print("\nNenhum prato foi escolhido")
+else:
+    print("\n= PRATOS ESCOLHIDOS=")
+    for prato in lista_pratos:
+        print(f"Prato: {prato}")
 
+    print(f"\nTotal: R$ {sum(precos_pratos):.2f}")
 
-# Mostrando resultado.
-print("\n=== RESTAURANTE ===")
-print(f"Nome e valor dos pratos: {lista_pratos}")
-print(f"Total a pagar: R${preco_total}")
+print("\nVolte sempre!")
