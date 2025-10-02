@@ -10,5 +10,8 @@ for i in range(5):
 for i in range(5):
     print(f"Números: {lista_numeros[i]}")
 
+# menor = min(lista_numeros)
+# maior = max(lista_numeros)
+
 print(f"Maior número: {max(lista_numeros)}")
 print(f"Menor número: {min(lista_numeros)}")

@@ -13,7 +13,7 @@ media = soma / 3
 # Mostras notas:
 print("\n= Resultados =")
 for i in range(3):
-    print(f"Nota: {lista_notas[i]}")
+    print(f"{i+1}ª Nota: {lista_notas[i]}")
 
 print(f"Média: {media}")
 print("FIM")
